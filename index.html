@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ft-dl</title>
+  <link rel="stylesheet" href="bower_components/toastr/toastr.min.css">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/jumbotron-narrow.css">
+</head>
+
+<body id="mainWindow">
+  <div class="container">
+    <div class="header clearfix">
+      <nav>
+        <ul class="nav nav-pills pull-right">
+          <li role="presentation"><a class="btn" role="button" data-toggle="collapse"
+              href="#collapseExample1" aria-expanded="false" 
+              aria-controls="collapseExample1">About Me</a></li>
+          <li role="presentation">
+            <a class="btn" role="button" data-toggle="collapse"
+              href="#collapseExample" aria-expanded="false" 
+              aria-controls="collapseExample">Help
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <h3 class="text-muted">Fairy Tail Downloader</h3>
+    </div>
+    <div class="collapse" id="collapseExample">
+       <div class="well">
+         <h3>Help</h3>
+         <p>This utility downloads the latest subbed Fairy Tail episodes in 720p for free!
+            In order for this utility to work properly, download <a target="_blank" href="http://gnuwin32.sourceforge.net/packages/wget.htm">Wget.</a>
+            After inputting the start and end episodes, click the start button.
+            Wait until progress bar shows the task is complete.
+            Then, click the copy button and open your command console.
+            Paste the command into and press enter.
+            Wait until download finishes.
+            (To specify where to download, just cd to your desired directory.)
+            I have found out that some episodes are not on the website. 
+            These episodes are: 100, 101, 102, 103, 104, 112, 170.
+            You can watch these missing episodes at <a target="_blank" href="http://www.ryuanime.com/">Ryu Anime</a>.
+         </p>
+        </div> 
+    </div>
+    <div class="collapse" id="collapseExample1">
+       <div class="well">
+         <table width="100%">
+           <tr>
+             <td>
+               <img src="face.png" class="img-responsive" id="image" width="175" height="175" style='display: inline;'>
+             </td>
+             <td>
+                <div id="aboutMe">
+                  <h3 style='vertical-align: top;'>Soham Ashodiya</h3>
+                  <p style='vertical-align: top;'>Hello, I am just a high school kid who likes watching anime and has started to learn programming. 
+                  If you find a bug in this utility, you can contact me at my email: <a target="_blank" href="mailto:sohamashodiya@gmail.com">sohamashodiya@gmail.com</a>. 
+                  </p>
+                </div>  
+             </td>  
+           </tr>   
+         </table>   
+         <!--<img src="face.png" class="img-responsive" width="175" height="175" style='display: inline;'>-->
+         
+         <!--<ul style='display: inline;'>-->
+         <!--  <li><h3 style='vertical-align: top;'>Soham Ashodiya</h3></li>-->
+         <!--  <li><p style='vertical-align: top;'>Hello, I am just a high school kid who likes watching anime and has started to learn programming. If you find a bug, you can contact me at </p></li>-->
+         <!--</ul>-->
+       </div> 
+    </div>   
+    <div class="row topRow">
+      <div class="col-xs-4">
+        <div class="row">
+          <div class="col-xs-12">
+            <label for="startNum" class="control-label">Start Video From:</label>
+            <input type="number" min="1" class="form-control start-end" id="startNum" placeholder="Video #">
+          </div>
+        </div>  
+        <div class="row">
+          <div class="col-xs-12">
+            <label for="endNum" class="control-label" id="endLabel">End At:</label>
+            <input type="number" min="1" class="form-control start-end" id="endNum" placeholder="Video #">
+          </div>
+        </div>  
+      </div>
+      <div class="col-xs-8">
+  			<center>	
+  				<button type="button" id="dlBtn" class="btn btn-lg btn-success">
+  						<span id="dlFont">Load Wget commands </span> 
+  						<i class="mdi-file-cloud-download"></i>
+  				</button>
+  			</center>	
+				<div class="progress" id="progress">
+  				<div id="progressBar" class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" 
+  				  aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+  				</div>
+				</div> 
+      </div>
+    </div>
+    <div class="well" id="errorSection" style="display:none">
+      <h4>Episodes that could not be downloaded:</h4>
+      <ul id="errorList">
+        
+      </ul>  
+    </div>
+
+    
+    <!--<span id="msg"></span>-->
+    <div id="dl-downloads">
+    </div>
+    <h4 class="pull-left">Wget video download commands are here:</h4>
+    <button id="copyBtn" type="button" class="btn btn-primary pull-right btn-sm">Copy</button>
+    <textarea class="form-control floating-label" placeholder="" id="wgetCmd"></textarea>  
+  </div>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="bower_components/toastr/toastr.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

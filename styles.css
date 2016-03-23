@@ -1,0 +1,56 @@
+/* CSS file placeholder. */
+body{
+  /* background-size: cover; */
+  background-image: url("assets/background.jpg");
+}
+.start-end{
+  width: 100px;
+  font-size: 16px;
+}
+
+#wgetCmd{
+  height: 215px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+#msg{
+  margin-left: 5px;
+}
+
+.navbar-header > div{
+  font-size: 24px;
+  padding: 20px;
+}
+
+#dlFont{
+  font-size: 16px;
+}
+
+.topRow{
+  padding-top: 20px;
+}
+
+#dlBtn{
+  margin-top: 45px;
+}
+
+#endLabel{
+  padding-top: 20px;
+}
+
+#aboutMe{
+  margin-left: 30px;
+}
+
+#image{
+  border-radius: 10px;
+}
+
+#progress{
+  margin-top: 10px;
+}
+
+#errorSection{
+  margin-top: 20px;
+}

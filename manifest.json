@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "Fairy Tail Video Downloader",
+  "short_name": "FT-Video",
+  "description": "",
+  "version": "0.0.1",
+  "minimum_chrome_version": "38",
+  
+  "icons": {
+    "16": "assets/icon_16.png",
+    "128": "assets/icon_128.png"
+  },
+
+  "permissions":[
+      "*://*/*",
+      "http://animedao.com/*",
+      "clipboardWrite",
+      "clipboardRead"
+    ],
+
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  }
+}
