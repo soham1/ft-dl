@@ -1,4 +1,4 @@
-# Fairy Tail Video Downloader
+# Fairy Tail Episode Downloader
 
 This application lets you download most subbed episodes of Fairy Tail in 720p. If not, 360p.
 
